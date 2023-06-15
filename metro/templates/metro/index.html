@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+ 
+    
+    <link rel="stylesheet" href="{% static "metro/index.css" %}"> 
+    
+    {% endblock %}
+
+{% block title %} METRO {% endblock %}
+{%block content%}
+
+<section id="latest-posts">
+  <h2>
+<a href ="adduser" >Register User</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href ="showuser" >Show User</a></h2>
+
+  
+</section>
+{% endblock %} 

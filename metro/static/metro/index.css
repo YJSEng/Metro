@@ -1,0 +1,61 @@
+#welcome {
+    background: linear-gradient(to right top, #6305dd, #390281);
+    padding: 6rem 12%;
+    color: white;
+}
+
+#welcome header {
+    display: flex;
+    align-items: top;
+    margin: 3rem auto;
+    color: white;
+}
+
+#home{
+    color: aqua;
+   
+}
+
+#welcome h2 {
+    font-size: 3.5rem;
+    margin: 0 0 0 2rem;
+    color: #e4e4e4;
+    width: 100%;
+    text-align:center;
+}
+
+#latest-posts {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 60rem;
+    margin: -6rem auto 2rem auto;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
+}
+#latest-posts h2{
+    text-align: center;
+}
+#latest-posts button{
+    background-color: #390281;
+    
+    
+   
+}
+#button{
+    background-color: aqua;
+}
+#about {
+    text-align: center;
+    padding: 3rem;
+    background-color: #e48900;
+    margin-top: 5rem;
+}
+
+#about h2 {
+    font-size: 3rem;
+}
+
+#about p {
+    font-size: 1.5rem;
+    color: #353535;
+}

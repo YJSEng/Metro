@@ -1,0 +1,20 @@
+{%extends "base.html"%}
+{% load static %}
+{% block css_files %}
+ <link rel="stylesheet" href="{% static "metro/post.css" %}"> 
+    
+    <link rel="stylesheet" href="{% static "metro/index.css" %}"> 
+    
+    {% endblock %}
+{%block title%}
+Insufficient Balance !
+{%endblock%}
+{% block content %}
+<section id="latest-posts">
+
+
+<h2> We are sorry </h2>
+<p>Hi {{mymember.firstname}} You  enter ₹ {{topup}}  . Min top up is ₹ 100</p>
+<h1><a href ="/details/topup/{{mymember.id}}" >Top UP</a>
+</section>
+{%endblock%}

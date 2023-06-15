@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+ <link rel="stylesheet" href="{% static "metro/post.css" %}"> 
+    
+    <link rel="stylesheet" href="{% static "metro/index.css" %}"> 
+    
+    {% endblock %}
+
+{% block title %} Members{% endblock %}
+
+
+{%block content%}
+<section id="latest-posts">
+ 
+<h1>Hi ,{{ mymember.firstname.capitalize }} {{ mymember.lastname.capitalize }}</h1>
+  
+<p>You have card: {{ mymember.card }}</p>
+<p>Your Card Value: {{ mymember.topup }}</p>
+
+<h1><a href ="topup/{{mymember.id}}" >Top UP</a>
+ &nbsp;    &nbsp;  &nbsp;  &nbsp; 
+<a href ="travel/{{mymember.id}}" >Travel</a></h1>
+
+
+
+</section>
+{% endblock %}

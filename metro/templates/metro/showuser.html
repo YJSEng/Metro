@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+ <link rel="stylesheet" href="{% static "metro/post.css" %}"> 
+    
+    <link rel="stylesheet" href="{% static "metro/index.css" %}"> 
+    
+    {% endblock %}
+
+{% block title %} METRO {% endblock %}
+
+
+{%block content%}
+<section id="latest-posts">
+
+<ul>
+  {% for x in mymembers %}
+  <li>
+    <a href="details/{{ x.id }}">
+    {{x.firstname.capitalize}}
+    {{x.lastname.capitalize}}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+</section>
+{% endblock %}

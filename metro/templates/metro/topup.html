@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+ <link rel="stylesheet" href="{% static "metro/post.css" %}"> 
+    
+    <link rel="stylesheet" href="{% static "metro/index.css" %}"> 
+    
+    {% endblock %}
+
+{% block title %} TopUP{% endblock %}
+{%block content%}
+<section id="latest-posts">
+
+<form action="updaterecord/{{ mymember.id }} "method='POST'>
+    {%csrf_token%}
+
+    
+<p> Add Topup</p> <input type="number" name="topup"/>
+<input type="submit" id="button" value="Add Value"/>
+</section>
+{% endblock %}
+
+

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+ <link rel="stylesheet" href="{% static "metro/post.css" %}"> 
+    
+    <link rel="stylesheet" href="{% static "metro/index.css" %}"> 
+    
+    {% endblock %}
+
+{% block title %} Travel{% endblock %}
+{%block content%}
+<section id="latest-posts">
+
+
+<form action="updaterecord1/{{ mymember.id }} "method='POST'>
+    {%csrf_token%}
+    <p> Number of stations travel</p>
+    <input type="number" name="stationtravel"/>
+
+    <input type="submit"  id="button" value="Add Value"/>
+</section>
+{% endblock %}
+
+
+<p>Back to <a href="/">Members</a></p>

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+ <link rel="stylesheet" href="{% static "metro/post.css" %}"> 
+    
+    <link rel="stylesheet" href="{% static "metro/index.css" %}"> 
+    
+    {% endblock %}
+
+{% block title %} METRO {% endblock %}
+{%block content%}
+
+<section id="latest-posts">
+
+<form action="" method='POST'>
+    {%csrf_token%}
+    <div class="form-control {% if form.firstname.errors %}errors{%endif%}">
+        
+        {% for field in form %}
+        {{ field.label_tag }}
+        {{field}}
+       
+        {{field.errors}}
+        {% endfor %}
+        </div>
+        <br>
+    <center>
+
+<input type="submit" id="button" value="Submit"  />
+    </center>
+</form>
+</section>
+
+
+{% endblock %}          
